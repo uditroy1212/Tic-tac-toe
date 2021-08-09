@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    color: #545454;
+    display: flex;
+    font-family: sans-serif;
+    justify-content: center;
+  }
+  
+  .container {
+    background: #14BDAC;
+    margin: 50px;
+    padding: 50px;
+    border-radius: 25px;
+  }
+  /* 
+  #start-page{
+    height: 70px;
+    width: 250px;
+    text-align: center;
+    padding: 20px 0;
+    background: linear-gradient(#bf8006, #f8d201);
+    color: #191e2d;
+    font-size: 23px;
+    font-weight: 700;
+    border-radius: 30px 10px;
+    border: 1px solid #f3d031;
+    cursor: pointer; 
+  }
+  #start-page:hover{
+    box-shadow: inset 3px 3px 5px rgba(255, 255, 255, 0.5), inset -2px -2px 5px rgba(0, 0, 0, 0.3);
+  } */
+  
+  .title {
+    text-align: center;
+  }
+  
+  .title span {
+    color: #F2EBD3;
+  }
+  
+  .status-action {
+    display: flex;
+    margin-top: 25px;
+    font-size: 25px;
+    justify-content: space-around;
+    height: 30px;
+  }
+  
+  .status span {
+    color: #F2EBD3;
+  }
+  
+  .reset {
+    cursor: pointer;
+  }
+  
+  .reset:hover {
+    color: #F2EBD3;
+  }
+  
+  .game-grid {
+    background: #0DA192;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 15px;
+    margin-top: 50px;
+  }
+  
+  .game-cell {
+    background: #14BDAC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    height: 200px;
+    width: 200px;
+  }
+  
+  .x::after {
+    content: '×';
+    font-size: 200px;
+  }
+  
+  .o::after {
+    content: '○';
+    color: #F2EBD3;
+    font-size: 225px;
+  }
+  
+  @media only screen and (max-width: 1024px) {
+    .game-grid {
+      margin-top: 25px;
+      grid-gap: 10px;
+    }
+  
+    .game-cell {
+      height: 150px;
+      width: 150px;
+    }
+  
+    .x::after {
+      font-size: 150px;
+    }
+  
+    .o::after {
+      font-size: 175px;
+    }
+  }
+  
+  @media only screen and (max-width: 540px) {
+    .container {
+      margin: 25px;
+      padding: 25px;
+    }
+  
+    .game-cell {
+      height: 100px;
+      width: 100px;
+    }
+  
+    .x::after {
+      font-size: 100px;
+    }
+  
+    .o::after {
+      font-size: 125px;
+    }
+  }
